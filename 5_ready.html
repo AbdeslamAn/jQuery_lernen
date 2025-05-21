@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Ready</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+    <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+    <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+    integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+    // Dieser Code wird erst ausgeführt, wenn das gesamte HTML-Dokument vollständig geladen ist.
+    // So stellen wir sicher, dass alle Elemente vorhanden sind, bevor wir mit jQuery darauf zugreifen.
+    // oder schraeiben Sie jQuery-code im Ende  vom </body>  
+    $(function() {
+        $("p").css("background-color", "orange");
+        });
+    </script>    
+</head>
+<body>
+    <p>Ein kleiner Absatz</p>
+</body>
+</html>
