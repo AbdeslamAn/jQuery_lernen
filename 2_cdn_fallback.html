@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CDN </title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+    <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    
+</head>
+<body>
+    <div id="beispiel">Beispiel</div>
+    
+    <script>
+        $("#beispiel").css("color", "red");
+    </script>
+</body>
+</html>
