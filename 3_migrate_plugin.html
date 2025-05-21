@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migrat plugin</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+    <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    
+    <!-- Migrat plugin: „Wenn du eine alte Funktion verwendest, 
+    die in der neuen Version nicht mehr unterstützt wird, 
+    erlaubt das Plugin, dass sie vorübergehend funktioniert 
+    und zeigt dir eine Warnung in der Konsole.“ -->
+    <!-- Migrat plugin:  "If you use an old function that is no longer supported
+     in the new version, the plugin allows it to work temporarily 
+     and shows you a warning in the console." -->
+
+    <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+    integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="beispiel"></div>
+
+    <script>
+        /* Das Funktion parseJSON nicht mehr funktioniert im jQuery 3.5,aber mit migrat plugin 
+         „Wenn du eine alte Funktion verwendest, 
+    die in der neuen Version nicht mehr unterstützt wird, 
+    erlaubt das Plugin, dass sie vorübergehend funktioniert 
+    und zeigt dir eine Warnung in der Konsole.*/
+        const opj = jQuery.parseJSON('{"name": "Abdeslam"}');
+        $("#beispile").text(opj.name);
+    </script>
+    
+</body>
+</html>
