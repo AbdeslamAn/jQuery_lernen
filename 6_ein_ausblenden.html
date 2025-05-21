@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemente ein-und ausblenden</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+    <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+    <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+    integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+        #details {
+            font: 200% sans-serif;
+            padding: 1em;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>Elemente ein-und ausblenden</u></h1>
+
+    <button id="button">Details</button>
+    <div id="details">Lorem ipsum dolor sit amet consectetur
+         adipisicing elit. Quam, optio. Cum eligendi consectetur 
+         pariatur, incidunt cupiditate molestiae dolores nemo, 
+         ipsum aut in at, adipisci assumenda rem nesciunt veritatis 
+         sunt recusandae nisi dignissimos labore.
+          Consequatur reprehenderit saepe earum, odit odio quam,
+           atque harum culpa, tenetur est quos sit quas deserunt cum
+            quasi minus. Modi totam, nobis quis, eum consectetur eveniet
+             unde atque suscipit delectus architecto ea similique voluptate accusantium explicabo laborum soluta maxime sint vel ratione, voluptatum quisquam aut minus voluptas! Modi ea, obcaecati id doloribus iste quis ratione aliquid cupiditate fugiat eius quidem similique molestiae est dolore molestias sunt reiciendis! Suscipit, eos deserunt impedit fugiat possimus voluptas labore quo laboriosam? Sunt praesentium odit, voluptatum, nostrum a impedit nam veritatis deleniti tempore consectetur repellat iste sapiente incidunt modi minima reprehenderit eveniet eaque tenetur, magni quasi animi dolore. Explicabo dolorum magni, neque repellat iusto, repudiandae officia autem ratione quasi accusamus at facilis modi. Consectetur, quibusdam totam? Voluptate expedita itaque tenetur nesciunt cupiditate, iusto saepe dolores mollitia eligendi dignissimos? Similique eius reprehenderit perferendis ex quam ab quae fugiat sint in magni hic, ducimus libero? Beatae repellat, velit commodi iure amet ut quas in pariatur animi aliquam alias temporibus nobis ea rerum quae laborum?
+
+    </div>
+
+    <script>
+        //hide()	Ein Element sofort verstecken.
+        //fadeIn(ms)	Ein Element langsam sichtbar machen (mit Übergang), Zeit in Millisekunden.
+        //fadeOut(ms)	Ein Element langsam ausblenden (mit Übergang).
+        /* $("#details").hide().fadeIn(4000).fadeOut(4000);*/
+
+        //fadeToggle()	Zwischen Einblenden und Ausblenden mit Übergang wechseln.
+        /* $("#button").on("click", function () {
+            $("#details").fadeToggle();
+        })*/
+
+        //slideToggle()	Ein- oder ausblenden mit einer Schiebe-Animation.
+        /* $("#button").on("click", function () {
+            $("#details").slideToggle();
+        })*/
+
+
+        //slideDown() → lässt ein Element nach unten „hereingleiten“ (sichtbar machen)
+        /* $("#button").on("click", function () {
+            $("#details").slideDown();
+        });*/
+
+
+        //slideUp() → lässt ein Element nach oben „hinausgleiten“ (verstecken)
+        $("#button").on("click", function () {
+            $("#details").slideUp();
+        });
+
+        
+    </script>
+</body>
+</html>
