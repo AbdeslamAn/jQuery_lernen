@@ -63,8 +63,22 @@
 
 
         //slideUp() → lässt ein Element nach oben „hinausgleiten“ (verstecken)
-        $("#button").on("click", function () {
+        /* $("#button").on("click", function () {
             $("#details").slideUp();
+        });*/
+
+        // Wenn der Button mit der ID "button" geklickt wird
+        $("#details").hide();
+        $("#button").on("click", function () {
+            
+            // Überprüfen, ob das Element mit der ID "details" sichtbar ist
+            if ($("#details").is(":visible")) {   
+                // Wenn sichtbar, dann ausblenden mit einem Slide-Effekt
+                $("#details").slideUp();    
+            } else {
+                // Wenn nicht sichtbar, dann einblenden mit einem Slide-Effekt
+                $("#details").slideDown();
+            }
         });
 
         
