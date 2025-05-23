@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Atrubut selector</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+        <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+        <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <aside>
+            <a href="#" title="Externer Link">linkdin</a>
+            
+
+
+       </aside>
+        <ul>
+            <li><a href="#" title="Artikel vom januar">Januar</a></li>
+            <li><a href="#" title="Artikel vom Februar">Februar</a></li>
+            <li><a href="#" title="Artikel vom März">März</a></li>
+            <li><a href="#" title="Artikel vom April">April</a></li>
+        </ul>
+    
+        <label for="name">Name :</label><input type="text"><br><br>
+        <label for="alte">Alte :</label><input type="text"><br>
+
+        <script>
+            $("a[title]").css("border", "3px solid orange");
+            $("a[title^=Artikl]").css("background", "green");
+            $("input[type=text]").css("background", "yellow");
+        </script>
+    </body>
+</html>
