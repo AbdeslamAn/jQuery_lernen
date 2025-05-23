@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Atribut selector not</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+        <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+        <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+    
+        <input type="checkbox" name="newletter"><span>name ist newletter</span><br>
+        <input type="checkbox" name="accept"><span>name ist accept</span><br>
+        <input type="checkbox" ><span>kein name-Attribut</span><br>
+
+        <script>
+
+            // Method 1 
+            //$("input[name!='newletter']").next().append("<strong>; <u>Nicht newletter </u></strong>");
+        
+            // Method 2
+            $("input").not("[name=newletter]").next().append("<strong>; <u>Nicht newletter </u></strong>");
+        </script>
+
+    </body>
+</html>
