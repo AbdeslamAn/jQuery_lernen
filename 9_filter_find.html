@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filte/find</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+        <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+        <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><u>Filter / Find : </u></h1>
+
+    <p class="besonders">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Explicabo, magni accusamus omnis reiciendis dolorum in
+          voluptatum, vitae repudiandae minima tempore, nulla porro 
+          possimus itaque cumque fuga sequi consequatur quaerat
+           perferendis.
+    </p>
+    <span id="seitenfuss">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Vero, sunt, sint neque, officiis obcaecati ullam deleniti iste
+          molestiae esse veniam doloremque. Ipsum in pariatur repellendus 
+          facere excepturi doloremque repudiandae, suscipit dignissimos at
+           enim natus similique numquam reprehenderit voluptate dolores 
+           magnam deleniti. 
+        Ducimus, vero quae ea quos dolore et! Blanditiis, officia!
+    </p>
+    </span>
+    <p class="besonders">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Quo magni maiores in dicta deleniti mollitia reprehenderit
+          quibusdam, modi libero dolor ut.
+         Voluptates, veniam ex. Totam dolore suscipit rerum autem natus!
+    </p>
+
+    <script>
+        $("p").filter(".besonders").css("color", "red");
+
+        $("#seitenfuss").find("p").css("color", "green");
+    </script>
+</body>
+</html>
