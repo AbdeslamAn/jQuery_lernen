@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furmularfeld auslesen farbe/color</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+        <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+        <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+        crossorigin="anonymous"></script>
+        
+<body>
+    <div>
+        <label for="fareb"><u>Bitte wählen Sie Ihre Hintergrundfarbe :</u></label>
+        <select name="farbe" id="farbe">
+            <option value="white">Weiss</option>
+            <option value="lightgreen">Hellgrün</option>
+            <option value="lightblue">Hellblau</option>
+            <option value="yellow">Gelb</option>
+        </select>
+    </div>
+    <script>
+        let $farbe = $("#farbe");
+        $farbe.on("change", function () {
+            $("body").css("background-color", $farbe.val());
+        });
+    </script>
+</body>
+</html>
