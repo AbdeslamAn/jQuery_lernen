@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS setzen</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        <!-- Wenn das CDN nicht funktioniert, funktioniert die lokale Datei jquery.min.js. -->
+        <!-- If the CDN doesn't work, the local file jquery.min.js will work -->
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+        <script src="https://code.jquery.com/jquery-migrate-3.5.2.js" 
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" 
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <p class="eins">Eins</p>
+    <p class="zwei">Zwei</p>
+    <script>
+        $(".eins").css("border","2px solid blue");
+        $(".eins").css("background-color","red");
+        $(".eins").css("font-size","2rem");
+
+        $(".zwei").css("color", "red").css("opacity", "0.5");
+        $("zwei").css({
+            "background-color": "yellow",
+            "font-size": "bold",
+            fontfamily: "sans-serif"
+        });
+    </script>
+</body>
+</html>
